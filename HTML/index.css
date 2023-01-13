@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(194, 194, 191);
+    background-color:rgb(221, 219, 219);
 }
 
 main{
@@ -21,6 +21,8 @@ main{
 }
 
 .table tr:nth-child(even){background-color: #c7c5c5;}
+.table th{background-color: #c7c5c5;}
+
 fieldset{
     display: flex;
     width: 60%;
