@@ -1,0 +1,126 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+
+body{
+    background-color: #F3EAE3;
+}
+.container{
+    display: flex;
+    width: 40%;
+    height: 68vh;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 6%;
+    margin-bottom: 2%;
+    background-color: #FFFFFF;
+}
+.productImage img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px 0px 0px 10px;
+}
+.imageCaption{
+    width: 95%;
+    padding-left: 25px;
+    padding-right:15px;
+    margin-bottom: 10px;
+}
+.preview{
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #BBBAC0;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    /* line-height: 0px; */
+}
+.bold{
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 0;
+    font-family: 'Fraunces';
+}
+.paragraph{
+    color: #BBBAC0;
+    font-size: 14px;
+    margin-bottom: 0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+.price1{
+    color: #3D8168;
+    font-family: 'Fraunces';
+    font-size: 30px;
+    font-weight: bold;
+    /* margin-top: 0; */
+}
+span{
+    color: rgb(63, 61, 61);
+    font-size: 14px;
+    font-weight: normal;
+    justify-content: center;
+    padding-left: 10px;
+    text-decoration: line-through;
+    margin-bottom: 20px;
+    position: absolute;
+    margin-top: 10px;
+    color: #BBBAC0;
+}
+button{
+    background-color: #3D8168;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    height: 10%;
+    width: 90%;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.imgmobile{
+    display: none;
+}
+
+@media screen and (width:500px) {
+    
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 375px){
+    .container{
+        display: block;
+        height: 120vh;
+        width: 60vh;
+    }
+    .imageCaption{
+        padding-left: 15px;
+        padding-right: 40px;
+    }
+    button{
+        height: 8vh;
+    }
+    .productImage img{
+        border-radius: 10px 10px 0px 0px;
+    }
+    .imgmobile{
+        display: block;
+    }
+    .desktopimg{
+        display: none;
+    }
+    .attribution{
+        display: none;
+    }
+}
