@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Week 3</title>
+</head>
+<body>
+    <h4>Questions</h4>
+    <p>1.1. Will the below two functions output the same results? Explain your answer.
+
+        function foo1() {
+        
+        return {bar: "hello"};
+        
+        }
+        
+        function foo2() {
+        
+        Return
+        
+        {bar: "hello"};
+        
+        }
+        <small>answer:</small><br>  
+        <small>
+            1. "Return is undefined" this is because "Return" is not a recognized JavaScript Key word. <br>
+        </small>
+        <small>
+            2.  if we replace "Return" with "return" output: "unreachable code"  this is because the return statement terminates a function.The code after return will not be executed.
+        </small>
+    </p>
+        <br>
+        <p>2.Write a simple function that returns a Boolean indicating whether a string is a palindrome (a word, phrase, number, or other sequence of symbols or elements, whose meaning may be interpreted the same way in either forward or reverse direction). Hint: ignore spaces
+
+            Example “alula” forwards and backwards is the same.
+            
+            “race car” forwards and backwards is the same.</p>
+            <br>
+            <br>
+            <p>
+                3.Using a Prompt allow user to enter numbers separated by commas then print the sum of the numbers.
+            </p>
+            <br>
+            <br>
+            <p>
+                4. Create a function that, given a DOM Element on the page, will visit the element itself and all of its descendents (not just its immediate children). For each element visited, the function should pass that element to a provided callback function.
+
+                The arguments to the function should be:
+
+                a DOM element
+
+                a callback function (that takes a DOM element as its argument
+            </p>
+
+        <script src="index.js"></script>
+    </body>
+</html>
