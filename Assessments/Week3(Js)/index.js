@@ -2,21 +2,21 @@
 
 function foo1() {
 
-    return {bar: "hello"};
-    
-    }
-    
-foo1()
+    return { bar: "hello" };
 
-    function foo2() {
-    
+}
+
+// foo1()
+
+function foo2() {
+
     Return
-    
-    {bar: "hello"};
-    
-    }
 
-foo2()
+    { bar: "hello" };
+
+}
+
+// foo2()
 
 
 // Return is undefined
@@ -30,36 +30,38 @@ Example “alula” forwards and backwards is the same.
 “race car” forwards and backwards is the same.
 */
 
-let myString ="Race car"
+let myString = "RAce Car"
 
-function checkPalindrome(string){
-        string = string.replace(/\s/g, "") //remove spaces
-        let lowercased = string.toLowerCase();//changing to same letter case (lower case)
-        return lowercased === lowercased.split('').reverse().join('');//(reversing and joining)
-    }
-    
-    console.log(checkPalindrome("alulak")); 
-    console.log(checkPalindrome("race chajskar")); 
-    console.log(checkPalindrome(myString))
+
+function checkPalindrome(string) {
+    string = string.replace(/\s/g, "") //remove spaces
+    let lowercased = string.toLowerCase();//changing to same letter case (lower case)
+    return lowercased === lowercased.split('').reverse().join('');//(reversing and joining)
+}
+
+console.log(checkPalindrome("ALULA"));
+console.log(checkPalindrome("race chajskar"));
+console.log(checkPalindrome("race car"));
+console.log(checkPalindrome(myString))
 
 
 /*
 3.Using a Prompt allow user to enter numbers separated by commas then print the sum of the numbers.
 */
 
-function addNumbers(){
-    let numbers = prompt("Enter numbers to add",00);
+function addNumbers() {
+    let numbers = prompt("Enter numbers to add", 00);
     let myArrayOfNums = numbers.split(",")
-    myArrayOfNums.map(Number);//converting each number to type of Number.
-    
-    let sum =myArrayOfNums.reduce((total =0, num) => total + num, 0)
-    
+    let newArr = myArrayOfNums.map(Number);//converting each number to type of Number.
+
+    let sum = newArr.reduce((total = 0, num) => total + num)
+
     console.log(numbers)
     console.log(sum)
 
 }
 
-// addNumbers()
+addNumbers()
 
 /*
 4. Create a function that, given a DOM Element on the page, will visit the element itself and all of its descendents (not just its immediate children). For each element visited, the function should pass that element to a provided callback function.
@@ -71,13 +73,13 @@ a DOM element
 a callback function (that takes a DOM element as its argument
     */
 
-function visitAllDescendants(element,callback){
+function visitAllDescendants(element, callback) {
     callback(element)//callback function (that takes a DOM element as its argument
 
     let children = element.children;
 
-    for(let i =0; i<children.length; i++){
-        visitAllDescendants(children[1], callback)// calling the visitallDescendants function with children as the parameter (recursively)
+    for (let i = 0; i < children.length; i++) {
+        visitAllDescendants(children[i], callback)// calling the visitallDescendants function with children as the parameter (recursively)
     }
 
 }
