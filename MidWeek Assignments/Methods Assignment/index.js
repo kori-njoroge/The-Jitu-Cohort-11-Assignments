@@ -77,10 +77,12 @@ console.log(cleanArr);
 */
 
 let mystring= "Hello World"
+
 function reverseSring(str) {
     let words = str.split(" ");  //separate the words
     words.reverse(); //reverse order of  words
     return words.join(" "); //join the reversed words
+    // return str.reverse()
 }
 
 console.log(reverseSring(mystring))
