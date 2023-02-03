@@ -5,6 +5,7 @@ form input{
   padding-left: 20px;
   border-radius: 5px;
   border: 1px solid blue;
+  font-weight: bold;
 }
 
 .moviesList{

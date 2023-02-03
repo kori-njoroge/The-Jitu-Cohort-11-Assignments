@@ -115,7 +115,8 @@ const MoviesNew =[
         "director": "Christopher Nolan",
         "actors": "Guy Pearce, Carrie-Anne Moss, Joe Pantoliano, Mark Boone Junior",
         "plot": "A man juggles searching for his wife's murderer and keeping his short-term memory loss from being an obstacle.",
-        "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNThiYjM3MzktMDg3Yy00ZWQ3LTk3YWEtN2M0YmNmNWEwYTE3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+        "posterUrll": "https://images-na.ssl-images-amazon.com/images/M/MV5BNThiYjM3MzktMDg3Yy00ZWQ3LTk3YWEtN2M0YmNmNWEwYTE3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+        "posterUrl":"https://m.media-amazon.com/images/M/MV5BZTcyNjk1MjgtOWI3Mi00YzQwLWI5MTktMzY4ZmI2NDAyNzYzXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_QL75_UY281_CR1,0,190,281_.jpg"
     },
     {
         "id": 9,
@@ -130,7 +131,8 @@ const MoviesNew =[
         "director": "Olivier Nakache, Eric Toledano",
         "actors": "François Cluzet, Omar Sy, Anne Le Ny, Audrey Fleurot",
         "plot": "After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.",
-        "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMTYxNDA3MDQwNl5BMl5BanBnXkFtZTcwNTU4Mzc1Nw@@._V1_SX300.jpg"
+        "posterUrll": "http://ia.media-imdb.com/images/M/MV5BMTYxNDA3MDQwNl5BMl5BanBnXkFtZTcwNTU4Mzc1Nw@@._V1_SX300.jpg",
+        "posterUrl":"https://mir-s3-cdn-cf.behance.net/projects/404/fc5a0234560755.Y3JvcCw4MDAsNjI1LDAsMQ.jpg"
     },
     {
         "id": 10,
@@ -145,7 +147,8 @@ const MoviesNew =[
         "director": "Matthew Vaughn",
         "actors": "Ian McKellen, Bimbo Hart, Alastair MacIntosh, David Kelly",
         "plot": "In a countryside town bordering on a magical land, a young man makes a promise to his beloved that he'll retrieve a fallen star by venturing into the magical realm.",
-        "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjkyMTE1OTYwNF5BMl5BanBnXkFtZTcwMDIxODYzMw@@._V1_SX300.jpg"
+        "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjkyMTE1OTYwNF5BMl5BanBnXkFtZTcwMDIxODYzMw@@._V1_SX300.jpg",
+        
     },
     {
         "id": 11,
