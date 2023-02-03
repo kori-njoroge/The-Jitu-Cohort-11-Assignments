@@ -1,0 +1,32 @@
+form input{
+  width: 30%;
+  margin-bottom: 10px;
+  height: 25px;
+  padding-left: 20px;
+  border-radius: 5px;
+  border: 1px solid blue;
+}
+
+.moviesList{
+  display: grid;
+  grid-template-columns: auto auto auto auto ;
+  gap: 10px;
+}
+
+.moviesList img{
+  width: 100%;
+}
+
+
+.movies--display{
+  /* border:1px solid; */
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 5px;
+  
+}
+.movies--display h4{
+  display: inline-block;
+}
+.movies--display p{
+  display: inline-block;
+}
