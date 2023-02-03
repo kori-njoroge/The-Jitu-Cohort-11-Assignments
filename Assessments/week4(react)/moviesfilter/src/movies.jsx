@@ -12,7 +12,8 @@ const MoviesNew =[
         "actors": "Alec Baldwin, Geena Davis, Annie McEnroe, Maurice Page",
         "plot": "A couple of recently deceased ghosts contract the services of a \"bio-exorcist\" in order to remove the obnoxious new owners of their house.",
         "posterUrll": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUwODE3MDE0MV5BMl5BanBnXkFtZTgwNTk1MjI4MzE@._V1_SX300.jpg",
-        "posterUrl":"https://cdn.posteritati.com/posters/000/000/040/611/the-shawshank-redemption-md-web.jpg"
+        "posterUrl":"https://alternativemovieposters.com/wp-content/uploads/2020/08/BryanSnuffer_Beetlejuice.jpg",
+        
     },
     {
         "id": 2,
@@ -42,7 +43,7 @@ const MoviesNew =[
         "actors": "Tim Robbins, Morgan Freeman, Bob Gunton, William Sadler",
         "plot": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
         "posterUrll": "https://images-na.ssl-images-amazon.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SX300.jpg",
-        "posterUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQN1eVKhaGhCHYEnqDzwHxMif8eFVxIK4n-2xmX9IJ&s"
+        "posterUrl":"https://cdn.posteritati.com/posters/000/000/040/611/the-shawshank-redemption-md-web.jpg"
     },
     {
         "id": 4,
