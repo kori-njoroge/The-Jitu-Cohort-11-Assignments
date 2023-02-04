@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import MoviesCard from "./displayMovies";
 
 
 
@@ -21,13 +22,9 @@ export default function MoviesList({movies}){
             <div className="moviesList">
                 {movies? 
                     movies.filter(item =>{
-                        return searchSTring.toLowerCase() === ''? item :item.title.toLowerCase().includes(searchSTring)
+                        return searchSTring.trim().toLowerCase() === ''? item :item.title.toLowerCase().includes(searchSTring)
                     }).map(item =>(
-                        <div key={item.id} className="movies--display">
-                            <h4>{item.id}.</h4>
-                            <p>{item.title}</p>
-                            <img src={item.posterUrl} alt={item.title}/>
-                        </div>
+                        <MoviesCard key={item.id} item={item}/>
                     )): ''
                 }
             </div>
