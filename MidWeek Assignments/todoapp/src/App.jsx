@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
-import List from './list';
-
+import List from './components/list';
+import AddItem from './components/addtodo';
 
 
 
@@ -37,44 +37,13 @@ function App() {
       date_dur: 5,
       completed: false
     },
-    {
-      id: 6,
-      title: "Bake pastries for me and neighbor",
-      date_dur: 5,
-      completed: false
-    },
-    {
-      id: 7,
-      title: "Go see a Broadway production",
-      date_dur: 5,
-      completed: false
-    },
-    {
-      id: 8,
-      title: "Write a thank you letter to an influential person in my life",
-      date_dur: 5,
-      completed: true
-    },
-    {
-      id: 9,
-      title: "Invite some friends over for a game night",
-      date_dur: 5,
-      completed: false
-    },
-    {
-      id: 10,
-      title: "Have a football scrimmage with some friends",
-      date_dur: 5,
-      completed: false
-    }
   ])
+
+  // console.log(toDoList)
   return (
     <div className='appContainer'>
       <h3>To do list</h3>
-      <form action="">
-        <input type="text" name="" placeholder='Add Item'  className='addItem'/>
-        <button>Add Item</button>
-      </form>
+      <AddItem settodolist ={setToDoList} />
       <hr />
       <List todos={toDoList} />
     </div> 

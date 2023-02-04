@@ -6,7 +6,7 @@ import React from 'react'
 
 function List(props) {
 
-
+console.log(props.todos)
     return (
         <div>
             <ul>
