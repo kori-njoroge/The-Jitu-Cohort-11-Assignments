@@ -1,16 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 
 
 
 
-function List(props) {
+function List({ todos, setCheckbox,setToDo }) {
+    const[checked,setChecked] = useState([]);
 
-console.log(props.todos)
+    function handleOnchange(item){
+        setChecked([{
+            ischecked: true,
+            title:item.title,
+            id: item.id
+        }])
+        handleIsChecked();
+        setToDo(prevState =>{
+            return(
+                // [...prevState,(todos.id === item.id? todos.ischecked =true: '')]
+                [...prevState,...[(todos.map(one => (one.id ===item.id? {"id":one.id,"title":one.title,"ischecked":one.ischecked =true}: one.id)))]]
+        )})
+        console.log(todos);
+    }
+
+    function handleIsChecked() {
+        setCheckbox(prevState => {
+            return (
+                [...prevState,...checked]
+            )
+        });
+    }
+
+
     return (
         <div>
             <ul>
-                {props.todos? props.todos.map(todo =><li key={todo.id}><input type="checkbox"/>{todo.title}</li>) : ''}
+                {todos ? todos.map(todo => (
+                    (todo.ischecked ? "" && todo === "" :
+                    <li key={todo.id}><input key={todo.id} type="checkbox" onChange= {()=>{handleOnchange(todo)}} />{todo.title}</li>)
+                )
+                ) : ''}
             </ul>
         </div>
     )

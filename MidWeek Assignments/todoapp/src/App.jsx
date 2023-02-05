@@ -1,51 +1,47 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import List from './components/list';
 import AddItem from './components/addtodo';
+import Completed from './components/completed';
 
 
 
 function App() {
+  const[completedTask, setCompletedTasks] = useState(true);
   const [toDoList, setToDoList] = useState([
     {
       id: 1,
-      title: "Do something nice for someone I care about",
+      title: "Watch a classic movie",
       date_dur: 5,
-      completed: true
+      ischecked: false
     },
     {
       id: 2,
-      title: "Memorize the fifty states and their capitals",
+      title: "Contribute code to an open-source software project",
       date_dur: 5,
-      completed: false
+      ischecked: false
     },
     {
       id: 3,
-      title: "Watch a classic movie",
-      date_dur: 5,
-      completed: false
-    },
-    {
-      id: 4,
-      title: "Contribute code or a monetary donation to an open-source software project",
-      date_dur: 5,
-      completed: false
-    },
-    {
-      id: 5,
       title: "Solve a Rubik's cube",
       date_dur: 5,
-      completed: false
+      ischecked: false
     },
   ])
+  const[checkbox,setCheckbox] =useState([])
 
-  // console.log(toDoList)
+
+
+
+  console.log("checking",checkbox)
   return (
     <div className='appContainer'>
       <h3>To do list</h3>
       <AddItem settodolist ={setToDoList} />
       <hr />
-      <List todos={toDoList} />
+      <List todos={toDoList} setToDo = {setToDoList} setCheckbox={setCheckbox}/>
+      {completedTask &&<Completed checkbox={checkbox}/>}
+      {/* <Completed  checkbox={checkbox}/> */}
     </div> 
   );
 }
