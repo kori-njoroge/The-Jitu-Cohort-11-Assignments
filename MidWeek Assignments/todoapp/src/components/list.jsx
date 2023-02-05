@@ -6,6 +6,7 @@ import React, { useState } from 'react'
 
 function List({ todos, setCheckbox,setToDo }) {
     const[checked,setChecked] = useState([]);
+    console.log("todos",todos);
 
     function handleOnchange(item){
         setChecked([{
@@ -17,7 +18,8 @@ function List({ todos, setCheckbox,setToDo }) {
         setToDo(prevState =>{
             return(
                 // [...prevState,(todos.id === item.id? todos.ischecked =true: '')]
-                [...prevState,...[(todos.map(one => (one.id ===item.id? {"id":one.id,"title":one.title,"ischecked":one.ischecked =true}: one.id)))]]
+                // [...(todos.indexOf(item.id) === item.id ? todos.ischecked = true : prevState)]
+                [...prevState,...(todos.map(one => (one.id ===item.id? {"id":one.id,"title":one.title,"ischecked":one.ischecked =true}: [...prevState] )))]
         )})
         console.log(todos);
     }
