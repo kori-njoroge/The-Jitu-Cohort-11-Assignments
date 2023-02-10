@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Week 5</title>
 </head>
 
@@ -13,6 +14,27 @@
         <h3>Q1</h3>
         <p>What is the difference between state and props?</p>
         <p class="answer">
+            <i>State</i> <br>
+            state is a way to store and manage local state within a component(the status of a component at a given time). State can be modified by the component, and changes to state trigger re-renders of the component. The state is declared and initialized within the component's class constructor or using the useState hook in case of functional components. <br><br>
+            <i>functional components</i> <br>
+            const[count, setCount] = useState(0);
+            <br>
+            The "setCount" is the method that update the state called count.
+            State can also be passed as a prop.
+        </p>
+        <br><br>
+        <p class="answer">
+            <i>Props</i> <br>
+            props are short form of properties, they are a way to pass data from a parent component to a child component. They are read-only, meaning that the child component cannot modify the props it receives. Props are passed down to a component using the component's tag. <br>
+            i.e;
+            < Count value ={count} />
+            The Count is an imported component to a parent component. <br><br>
+            <i>Receiving the passed props</i><br>
+            export default function Count(props){
+                console.log(props.value).// log the value  which is the count.
+            }
+        </p>
+        <br><br>
         </p>
     </div>
     <div class="">
@@ -103,20 +125,22 @@
                 <i>Uncontrolled components</i> <br>
                 In an uncontrolled component, the form element manages its own internal state and the React state is not
                 updated when the form element changes. <br>
-                To create an uncontrolled component, you would omit the value and onChange properties on the form element.
+                To create an uncontrolled component, you would omit the value and onChange properties on the form
+                element.
             </p>
         </div>
         <div class="">
             <h3>Q5</h3>
             <p>Explain what three dots mean in react</p>
             <p class="answer">
-                Known as the "spread operator". <br>
-                They spread syntax in JavaScript. The spread operator allows you to spread an array or an object into another array or object.
+                Known as the "spread operator" is the spread syntax in JavaScript.
+                <br> The spread operator allows you to spread an array or an object into
+                another array or object.
                 In React, it's often used to pass down properties from a parent component to a child component.
-                Also used with arrays to spread  the elements of one array into another.
-                i.e;
-                let Arr1 = [1,2,3,4];
-                let arr2 =[5,6,7,8];
+                Also used with arrays to spread the elements of one array into another. <br> 
+                i.e; <br>
+                let Arr1 = [1,2,3,4]; <br>
+                let arr2 =[5,6,7,8]; <br>
                 let arr3 =[...arr1, ...arr2]// the array 3 contains the elemnts from arr1 and arr2 respectively;
             </p>
         </div>
