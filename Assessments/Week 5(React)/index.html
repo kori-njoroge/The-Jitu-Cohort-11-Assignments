@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5</title>
+</head>
+
+<body>
+    <div class="">
+        <h3>Q1</h3>
+        <p>What is the difference between state and props?</p>
+        <p class="answer">
+        </p>
+    </div>
+    <div class="">
+        <h3>Q2</h3>
+        <p>With the following code blocks, can you say what will happen in each of these instances?
+            <br>
+            const c1 = 1; <br> c1 = 3;
+        <p class="answer">
+            "Invalid assignment to a const variable" <br> a variable declared using the "const" key word cannot be
+            reassigned and remains as declared through out the life time of the app
+        </p>
+        <br>
+        <br>
+        Or updating a string…
+        <br>
+        const c2 = “hello”;<br>
+        c2 += “world!”;
+        <p class="answer">
+            "Invalid assignment to a const variable" <br> a variable declared using the "const" key word cannot be
+            reassigned and remains as declared through out the life time of the app.
+            And cannot be redeclared.
+            <br>In our case c2 += "world" is trying to reassign the value of c2 which is syntactically incorrect as per
+            the "const" key word usage
+        </p>
+        <br>
+        <br>
+        Or reassigning an object…
+        <br>
+        <br>
+        const c3 = {}; <br> c3.name = “Geoff”;<br> c3.someValue = “Sausage”;<br>
+        <p class="answer">
+            Const declaration creates a read-only reference to a value. It does not mean the value it holds is
+            immutable, just that the variable identifier cannot be reassigned.
+            With an object, this means the object itself can still be altered and that why we are able to add values to
+            empty object declared using the const
+        </p>
+        c3 = {};
+        <p class="answer">
+            on c3 ={} is trying to reassign and m=not mutataing the values of the object. There will be an error of
+            invalid reassigning of a variable.
+        </p>
+        </p>
+        <div class="">
+            <h3>Q3</h3>
+            <p>Outline the various stages of the React.js lifecycle.</p>
+            <p class="answer">
+                <p class="stage">(1.) Mounting</p>
+                <div class="answer">
+                    This method occurs when component is first added to the Dom. <br>
+                    <i>Method called:</i> <br>
+                    useEffect(): This hook is used to perform setup logic when the component is first mounted, such as fetching data or adding event listeners.
+                </div>
+                <p class="stage">(2.) Updating</p>
+                <div class="answer">
+                    This phase occurs when the component receives new props or its state is updated. <br>
+                    <i>Method called:</i> <br>
+                    useEffect(): In this stage  useEffect hook can also be used to perform update logic, such as re-fetching data or updating event listeners.
+                    This hook also excecutes the code inside when the dependecy array changes.
+                </div>
+                <p class="stage">(3.) Unmounting</p>
+                <div class="answer">
+                    This stage occurs when a component is removed from the DOM. <br>
+                    <i>Method called:</i> <br>
+                    useEffect(): In this stage the useEffect hook is used to perform cleanup logic, such as removing event listeners,changing the state of a dependency array, when the component is unmounted
+                    useEffect performs the clean up logic if a clean up function is provided.
+                </div>
+            </p>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
