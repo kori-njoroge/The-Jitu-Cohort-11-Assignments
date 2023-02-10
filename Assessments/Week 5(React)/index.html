@@ -59,26 +59,58 @@
             <h3>Q3</h3>
             <p>Outline the various stages of the React.js lifecycle.</p>
             <p class="answer">
-                <p class="stage">(1.) Mounting</p>
-                <div class="answer">
-                    This method occurs when component is first added to the Dom. <br>
-                    <i>Method called:</i> <br>
-                    useEffect(): This hook is used to perform setup logic when the component is first mounted, such as fetching data or adding event listeners.
-                </div>
-                <p class="stage">(2.) Updating</p>
-                <div class="answer">
-                    This phase occurs when the component receives new props or its state is updated. <br>
-                    <i>Method called:</i> <br>
-                    useEffect(): In this stage  useEffect hook can also be used to perform update logic, such as re-fetching data or updating event listeners.
-                    This hook also excecutes the code inside when the dependecy array changes.
-                </div>
-                <p class="stage">(3.) Unmounting</p>
-                <div class="answer">
-                    This stage occurs when a component is removed from the DOM. <br>
-                    <i>Method called:</i> <br>
-                    useEffect(): In this stage the useEffect hook is used to perform cleanup logic, such as removing event listeners,changing the state of a dependency array, when the component is unmounted
-                    useEffect performs the clean up logic if a clean up function is provided.
-                </div>
+            <p class="stage">(1.) Mounting</p>
+            <div class="answer">
+                This method occurs when component is first added to the Dom. <br>
+                <i>Method called:</i> <br>
+                useEffect(): This hook is used to perform setup logic when the component is first mounted, such as
+                fetching data or adding event listeners.
+            </div>
+            <p class="stage">(2.) Updating</p>
+            <div class="answer">
+                This phase occurs when the component receives new props or its state is updated. <br>
+                <i>Method called:</i> <br>
+                useEffect(): In this stage useEffect hook can also be used to perform update logic, such as re-fetching
+                data or updating event listeners.
+                This hook also excecutes the code inside when the dependecy array changes.
+            </div>
+            <p class="stage">(3.) Unmounting</p>
+            <div class="answer">
+                This stage occurs when a component is removed from the DOM. <br>
+                <i>Method called:</i> <br>
+                useEffect(): In this stage the useEffect hook is used to perform cleanup logic, such as removing event
+                listeners,changing the state of a dependency array, when the component is unmounted
+                useEffect performs the clean up logic if a clean up function is provided.
+            </div>
+            </p>
+        </div>
+        <div class="">
+            <h3>Q4</h3>
+            <p>Difference between controlled and uncontrolled components</p>
+            <p class="answer">
+                In React, a "controlled component" is a form element that is controlled by React state, while an
+                "uncontrolled component" is a form element that is controlled by its own internal state. <br>
+                <br>
+                <i>Controlled Component:</i> <br>
+                In a controlled component, the value of the form element is set by React state, and any updates to the
+                input are reflected in the state. This means that the state is the source the form data, and the form
+                elements are updated whenever the state changes.
+                <br> To create a controlled component, you would use <b>onChange</b> handlers to update the state
+                whenever the form element's value changes, and set the value property of the form element to the value
+                stored in the state.
+                <br>
+                <br>
+                <i>Uncontrolled components</i> <br>
+                In an uncontrolled component, the form element manages its own internal state and the React state is not
+                updated when the form element changes. <br>
+                To create an uncontrolled component, you would omit the value and onChange properties on the form element.
+            </p>
+        </div>
+        <div class="">
+            <h3>Q5</h3>
+            <p>Explain what three dots mean in react</p>
+            <p class="answer">
+                
             </p>
         </div>
     </div>
