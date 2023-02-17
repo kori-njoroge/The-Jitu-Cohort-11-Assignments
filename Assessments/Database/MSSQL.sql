@@ -86,5 +86,16 @@ VALUES ( 'Mark Doe', +25479830836),
        ( 'Bob Johnson', +2547930835)
 
 -- fetch duplicate records.
+SELECT names,phoneNumber, COUNT(*)
+FROM Company.employees
+GROUP BY names,phoneNumber
+HAVING COUNT(*) > 1;
 
 
+-- 5.Write an SQL query to fetch only odd rows from the table (create dummy data to use)
+-- using the Company.employees table.
+SELECT * 
+FROM Company.employees 
+WHERE employee_id % 2 <> 0;
+
+6.
