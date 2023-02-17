@@ -141,7 +141,7 @@ BEGIN
 END
 Go;
 
-SELECT * FROM dbo.CalculateAgeMent(2000-11-09)
+SELECT dbo.CalculateAgeMent(2000-11-09)
 
 
 
