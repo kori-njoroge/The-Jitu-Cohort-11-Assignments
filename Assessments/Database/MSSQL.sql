@@ -44,11 +44,47 @@ ORDER BY numberOfCustomers ASC;
 
 
 -- 3.Write one procedure that can insert or update the employee (avoid using if statement to check the statement e.g., if (statement ==’Insert)) 
-CREATE PROCEDURE ins_update
-AS
-    INSERT OR UPDATE smt
 GO; 
 
+CREATE PROCEDURE InsertOrUpdateEmployee
+  @employee_id INT,
+  @employee_name VARCHAR(50),
+  @phoneNumber BIGNINT
+AS
+BEGIN
+  IF EXISTS (SELECT * FROM employees WHERE employee_id = @employee_id)
+  BEGIN
+    -- Update the existing record
+    UPDATE employees
+    SET names = @employee_name,
+        phoneNumber = @phoneNumber
+    WHERE employee_id = @employee_id
+  END
+  ELSE
+  BEGIN
+    -- Insert a new record
+    INSERT INTO employees (employee_id,names, phoneNumber)
+    VALUES (@employee_id, @employee_name, @phoneNumber)
+  END
+END
 
+
+-- 4.Write an SQL query to fetch duplicate records from EmployeeDetails (without considering the primary key – EmpId)(create dummy data to use) 
+-- Inserting more data to the employees table we created.
+INSERT INTO Company.employees (names, phoneNumber)
+VALUES ( 'Mark Doe', +25479830836),
+       ( 'mark Smith', +25478030834),
+       ( 'PJ Johnson', +25479830835),
+       ( 'Bella Doe', +25479830836),
+       ( 'Antonio Smith', +25798030834),
+       ( 'Ziroll Johnson', +24798030835),
+       ( 'Per Doe', +25479803036),
+       ( 'None Smith', +25479803083),
+       ( 'Mike Johnson', +25479803035),
+       ( 'John Doe', +25479803083),
+       ( 'Jane Smith', +25479803834),
+       ( 'Bob Johnson', +2547930835)
+
+-- fetch duplicate records.
 
 
