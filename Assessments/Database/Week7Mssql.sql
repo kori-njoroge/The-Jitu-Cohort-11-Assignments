@@ -2,7 +2,7 @@ use Organisation
 SELECT DB_NAME() AS DatabaseName;
 -- 1. Create two tables, employees and sales. Get a list of all employees who did not make any sales.
 
-CREATE SCHEMA Company
+CREATE SCHEMA Company;
 GO;
 
 CREATE TABLE Company.employees
@@ -37,7 +37,8 @@ INSERT INTO Company.sales
 VALUES
     ( 1, 'shoes', 100.00),
     ( 1, 'shoes', 150.00),
-    ( 2, 'shoes', 200.00);
+    ( 2, 'shoes', 200.00),
+    ( 1, 'Beads', 200.00);
 
 SELECT *
 FROM Company.employees
@@ -68,10 +69,11 @@ GO;
 CREATE PROCEDURE InsertOrUpdateEmployee
     @employee_id INT,
     @employee_name VARCHAR(50),
-    @phoneNumber BIGNINT
+    @phoneNumber BIGINT
 AS
 BEGIN
     IF EXISTS (SELECT *
+    -- CASE EXISTS (SELECT *
     FROM employees
     WHERE employee_id = @employee_id)
   BEGIN
