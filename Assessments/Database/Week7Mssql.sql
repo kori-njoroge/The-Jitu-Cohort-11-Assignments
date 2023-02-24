@@ -61,39 +61,38 @@ FROM CustomersTables
 GROUP BY Country
 HAVING COUNT(*) > 3
 ORDER BY numberOfCustomers ASC;
-
-
--- 3.Write one procedure that can insert or update the employee (avoid using if statement to check the statement e.g., if (statement ==’Insert)) 
 GO;
 
-CREATE PROCEDURE InsertOrUpdateEmployee
-    @employee_id INT,
-    @employee_name VARCHAR(50),
-    @phoneNumber BIGINT
+-- 3.Write one procedure that can insert or update the employee (avoid using if statement to check the statement e.g., if (statement ==’Insert)) 
+ 
+CREATE PROCEDURE InsertOrUpdateEmployee (
+  @employeeId INT,
+  @names VARCHAR(200),
+  @phoneNumber BIGINT,
+  @statement VARCHAR(10)
+)
 AS
 BEGIN
-    IF EXISTS (SELECT *
-    -- CASE EXISTS (SELECT *
-    FROM employees
-    WHERE employee_id = @employee_id)
-  BEGIN
-        -- Update the existing record
-        UPDATE employees
-    SET names = @employee_name,
-        phoneNumber = @phoneNumber
-    WHERE employee_id = @employee_id
-    END
-  ELSE
-  BEGIN
-        -- Insert a new record
-        INSERT INTO employees
-            (employee_id,names, phoneNumber)
-        VALUES
-            (@employee_id, @employee_name, @phoneNumber)
-    END
+  SET NOCOUNT ON;
+  
+  -- Check if the employee already exists
+  DECLARE @exists INT;
+  SELECT @exists = COUNT(*) FROM Employees WHERE EmployeeId = @employeeId;
+  
+  CASE 
+    WHEN @exists = 0 THEN
+      INSERT INTO Company.employees (EmployeeId, names, phoneNumber)
+      VALUES (@employeeId, @names, @phoneNumber);
+    
+    WHEN @exists > 0 THEN
+      UPDATE Company.employees SET 
+        names = @names,
+        phoneNumber = @phoneNumber,
+      WHERE EmployeeId = @employeeId;
+  END CASE;
+  
 END
-
-
+GO;
 -- 4.Write an SQL query to fetch duplicate records from EmployeeDetails (without considering the primary key – EmpId)(create dummy data to use) 
 -- Inserting more data to the employees table we created.
 INSERT INTO Company.employees
@@ -126,29 +125,33 @@ FROM Company.employees
 WHERE employee_id % 2 <> 0;
 GO;
 
+
+
 -- 6.Write a function that can calculate age given a certain date of birth
-CREATE FUNCTION CalculateAge(@dateOfBirth DATE)
+CREATE FUNCTION Company.CalculateAge(@dateOfBirth DATE)
 RETURNS INT
 AS
 BEGIN
-  DECLARE @age INT
+    DECLARE @age INT
 
-  SET @age = DATEDIFF(YEAR, @dateOfBirth, GETDATE())
+    SET @age = DATEDIFF(YEAR, @dateOfBirth, GETDATE())
 
-  IF (MONTH(@dateOfBirth) > MONTH(GETDATE()) OR (MONTH(@dateOfBirth) = MONTH(GETDATE()) AND DAY(@dateOfBirth) > DAY(GETDATE())))
+    IF (MONTH(@dateOfBirth) > MONTH(GETDATE()) OR (MONTH(@dateOfBirth) = MONTH(GETDATE()) AND DAY(@dateOfBirth) > DAY(GETDATE())))
   BEGIN
-    SET @age = @age - 1
-  END
+        SET @age = @age - 1
+    END
 
-  RETURN @age
+    RETURN @age
 END
 Go;
 
-SELECT dbo.CalculateAgeMent(2000-11-09)
+SELECT *
+FROM [Company].[CalculateAge](2000-11-09)
 
 
 
-
+select *
+from sales.orders
 
 -- SELECT *
 -- FROM sys.objects
@@ -163,7 +166,3 @@ SELECT dbo.CalculateAgeMent(2000-11-09)
 
 
 -- 997578592
-
-
-
-select * from sales.orders
