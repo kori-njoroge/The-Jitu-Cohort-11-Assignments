@@ -1,4 +1,5 @@
--- SELECT DB_NAME() AS DatabaseName;
+use Organisation
+SELECT DB_NAME() AS DatabaseName;
 -- 1. Create two tables, employees and sales. Get a list of all employees who did not make any sales.
 
 CREATE SCHEMA Company
