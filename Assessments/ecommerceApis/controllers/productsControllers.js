@@ -91,15 +91,17 @@ module.exports = {
     },
     updateProduct: (req, res) => {
         const { id, description, price } = req.body
-        products = products.map(product => {
+        const updatedproducts = products.map(product => {
             if (product.id === id) {
-                product.description = description
-                product.price = price
-            } else {
-                product
-            }
+                return{
+                    ...product,
+                    description : description,
+                    price : price
+                }
+            } 
+                return product
         })
-        res.json(products)
+        res.json(updatedproducts)
     },
     deleteProduct: (req, res) => {
         const { id } = req.params;
